@@ -1,0 +1,57 @@
+<%- include("header.ejs") -%>
+
+<div class="bg-wrapper">
+
+    <div id="mid-main-time">
+    <!-- Focus -->
+    <div class="prompt" style="">
+
+      <!-- <h3>What is your main focus for today?</h3> -->
+      <div class="box">
+
+      <%  PomodoroItems.forEach(function(item){ %>
+            <%  if(PomodoroItems.length  >= 1 ){%>
+        <form action="/deletePomodoro" method="post" >
+          <div class="item pretty p-default">
+            <input type="checkbox" name="checkbox" value="<%=item._id%>" onChange="this.form.submit()">
+            <p class="pomodoroName"><%=item.name%></p>
+            <div id="countdown" class="timer"></div>
+          </div>
+          <input style="display: block;height:0;" type="hidden" name="listName" value="<%= listTitle %>"></input>
+        </form>
+          <%  }%>
+            <%  })%>
+            <%  if(PomodoroItems.length === 0 ){%>
+                <h3> <%= listTitle %> </h3>
+          <form action="/pomodoro" method="post">
+            <input id="inputFocus" type="text" name="pomodoro"  autocomplete="off">
+            <button style="display: none;" type="submit" name="list" value="<%= listTitle %>"></button>
+          </form>
+              <%  } %>
+
+      </div>
+
+
+    </div>
+
+    </div>
+  <!-- Sidebar -->
+  <div class="dropup">
+  <div id="settings">
+    <img src="css1/icons/settings.png" class = "icon" alt="">
+     <div class='dropup-content'>
+       <a href='/todo' class ="currentlyWorking">To do list</a>
+       <a href='/pomodoro' class ="currentlyWorking">Pomodoro</a>
+        <a href='/' class ="currentlyWorking">Main focus</a>
+     </div>
+   </div>
+   </div>
+
+</div>
+
+
+
+<script src="pomodoro.js" charset="utf-8"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
+</html>

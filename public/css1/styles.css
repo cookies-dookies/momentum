@@ -1,0 +1,333 @@
+body {
+  font-family: Logo, Arial, sans-serif;
+  /* Image */
+  background-image: url("img/3.jpg");
+  /* Full height and width*/
+  background-size: cover;
+  /* Center and scale the image nicely */
+  background-repeat: no-repeat;
+  color: white;
+}
+
+
+h3 {
+  font-size: 5.1vh;
+  padding: 2vh;
+  display: inline-flex;
+  text-align: center;
+  font-family: Logo, Arial, sans-serif;
+}
+
+.greetings {
+  font-size: 4.1vh;
+  text-align: center;
+  font-family: Logo, Arial, sans-serif;
+}
+
+.today {
+  text-transform: uppercase;
+  font-size: 3vh;
+  margin-top: -5%;
+}
+
+.prompt {
+  position: absolute;
+  width: 65%;
+  font-family: Logo, Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+  text-align: center;
+  margin: 10% 15% 0 0%;
+}
+
+.clock {
+  font-family: Lato, Arial, sans-serif;
+  font-size: 20vh;
+  text-align: center;
+  text-shadow: 0 0 3px #000;
+}
+
+#mid-main-time {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35vh;
+  margin-bottom: -20vh;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+/* For phones and tablets */
+@media (max-width: 550px) {
+  body {
+    /* Full height and width*/
+    /* background-size:cover; */
+    background-size: auto;
+    /* Center and scale the image nicely */
+    background-repeat: no-repeat;
+  }
+
+  .prompt {
+    position: absolute;
+    width: 80%;
+    font-family: Logo, Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 200;
+    text-align: center;
+    margin: 15% 25% 0 0%;
+  }
+
+  .clock {
+    font-family: Lato, Arial, sans-serif;
+    font-size: 15vh;
+    text-align: center;
+  }
+
+  .icon {
+    position: fixed;
+    margin-top: 280px;
+    margin-bottom: 1%;
+    margin-left: 2%;
+    padding: 6px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color 0.2s linear;
+  }
+}
+
+/* Tablets and ipads */
+media (max-width: 950px) {
+  html, body {
+    /* Full height and width*/
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .prompt {
+    position: absolute;
+    width: 80%;
+    font-family: Logo, Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 200;
+    text-align: center;
+    /* margin: 15% 25% 0 0% ; */
+  }
+
+  .clock {
+    font-family: Lato, Arial, sans-serif;
+    font-size: 15vh;
+    text-align: center;
+  }
+
+  .icon {
+    position: fixed;
+    margin-top: 200px;
+    margin-bottom: 1%;
+    margin-left: 2%;
+    padding: 6px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color 0.2s linear;
+  }
+}
+
+
+
+
+/*  POMODORO  */
+.currentlyWorking{
+  font-family: "Dancing Script",Lato,Arial,sans-serif;
+  font-family: 8rem;
+}
+.timer{
+  font-family: Dancing Script, Lato, Arial, sans-serif;
+  font-size: 20vh;
+  text-align: center;
+  text-shadow: 0 0 3px #000;
+}
+
+
+
+
+
+                      /* DROP UP MENU */
+.dropup {
+   position: fixed;
+  padding-top: 37%;
+  display: inline-block;
+}
+
+.dropup-content {
+  display: none;
+    font-family: Dancing script,  Logo, Arial, sans-serif;
+    font-weight: bold;
+  position: absolute;
+   color: white;
+  background-color: transparent;
+  min-width: 160px;
+  bottom: 50px;
+  z-index: 1;
+}
+
+.dropup-content a {
+  /* color: black; */
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropup-content
+ a:hover
+ {
+  background-color: #ccc;
+   opacity: 0.2;
+}
+
+.dropup:hover
+.dropup-content {
+  display: block;
+  color: white;
+}
+
+                  /* Settings  */
+
+
+#settings {
+  style: none;
+
+}
+
+.show {display:block;}
+
+.icon {
+
+  padding: 6px;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color 0.2s linear;
+}
+
+.icon:hover  {
+  height: 32px;
+  width: 32px;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.25);
+}
+
+
+ /*  INPUTFOCUS */
+
+
+.box {
+  max-width: 500px;
+  margin-top: 10px;
+  margin: 15px auto;
+  /*margin-left: 230px;*/
+  background-color: transparent;
+  text-align: center;
+  border-radius: 5px;
+
+}
+
+#heading {
+    background-color: transparent;
+  text-align: center;
+}
+
+.item {
+  /* min-height: 70px; */
+margin-right: 10px;
+  /* display: inline-block; */
+    /* align-items: center; */
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+
+
+input[type="checkbox"] {
+  /* margin: 20px; */
+   color: #fff;
+  text-align: center;
+  transition: border-color .2s ease;
+   font-family: Lato, Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+
+
+}
+
+
+form.item {
+  text-align: center;
+/*  margin-left: 20px;*/
+}
+
+input[type="text"] {
+  padding-right: 10px;
+  text-align: center;
+  font-family:  Lato, Arial, sans-serif;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 30px;
+  font-weight: 200;
+  width: 363px;
+
+
+}
+
+input[type="text"]:focus {
+  outline: none;
+
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+
+
+/* Input for focus */
+#inputFocus {
+  margin: auto auto;
+  width: 100%;
+  display: block;
+  background: 0;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  outline: 0;
+  text-align: center;
+  transition: border-color .2s ease;
+  font-family: Logo, Gayathri;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: -5%;
+
+}
+
+.focus {
+  font-family: Logo, Gayathri;
+  font-size: 2rem;
+}
+p{
+  margin-top: 20px;
+}
+.pomodoroName{
+  margin-bottom: 80px;
+}

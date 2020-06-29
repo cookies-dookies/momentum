@@ -1,0 +1,55 @@
+<%- include("header.ejs") -%>
+
+
+<div class="bg-wrapper">
+
+    <div id="mid-main-time">
+    <!-- Focus -->
+    <div class="prompt" style="">
+      <div class="clock"></div>
+      <div class="greetings currentlyWorking"></div>
+      <h3> <%= listTitle %> </h3>
+      <!-- <h3>What is your main focus for today?</h3> -->
+      <div class="box">
+
+      <%  FocusItems.forEach(function(item){ %>
+            <%  if(FocusItems.length  >= 1 ){%>
+        <form action="/delete" method="post" >
+          <div class="item pretty p-default">
+            <input type="checkbox" name="checkbox" value="<%=item._id%>" onChange="this.form.submit()">
+              <p class="today"> Today </p>
+            <p><%=item.name%></p>
+          </div>
+          <input style="display: block;height:0;" type="hidden" name="listName" value="<%= listTitle %>"></input>
+        </form>
+          <%  }%>
+            <%  })%>
+            <%  if(FocusItems.length === 0 ){%>
+          <form action="/" method="post">
+            <input id="inputFocus" type="text" name="focus"  autocomplete="off">
+            <button style="display: none;" type="submit" name="list" value="<%= listTitle %>"></button>
+          </form>
+              <%  } %>
+
+      </div>
+
+
+    </div>
+
+    </div>
+  <!-- Sidebar -->
+  <div class="dropup">
+  <div id="settings">
+    <img src="css1/icons/settings.png" class = "icon" alt="">
+     <div class='dropup-content'>
+       <a href='/todo' class ="currentlyWorking">To do list</a>
+       <a href='/pomodoro' class ="currentlyWorking">Pomodoro</a>
+        <a href='/' class ="currentlyWorking">Main focus</a>
+     </div>
+   </div>
+   </div>
+
+</div>
+
+
+  <%- include("footer.ejs") -%>
